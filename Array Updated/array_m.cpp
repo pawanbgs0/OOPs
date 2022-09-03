@@ -11,21 +11,16 @@ int main()
     Array a2(size_array);
     Array res(size_array);
 
-    cin >> a1;
+    // a1.take_input();
     cout << "A1 INPUT OVER" << endl;
-    cin >> a2;
+    // a2.take_input();
     cout << "A2 INTPUT OVER" << endl;
 
     res = a1 + a2;
-    
-    cout << "Res is: ";
+
     cout << res;
 
-    cout << "a1 is: ";
-    cout << a1;
 
-    cout << "a2 is: ";
-    cout << a2;
 
     return 0;
 }

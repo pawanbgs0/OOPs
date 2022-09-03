@@ -10,7 +10,19 @@ class Array
     public:
         Array();
         Array(int size);
+        Array operator+(const Array &ob);
+        friend ostream &operator<<(ostream &out, const Array &ob);
+        friend istream &operator>>(istream &in, const Array &ob);
+};
+
+class Matrix
+{
+    int **arr;
+    int row;
+    int column;
+    
+    public:
+        Matrix();
         void take_input();
         void display();
-        Array add(Array temp);
 };
