@@ -13,6 +13,12 @@ Array::Array()
     arr = new int[size];
 }
 
+
+Array::~Array()
+{
+    delete this->arr;
+}
+
 Array Array::operator+(const Array &ob)
 {
     // Array res(this->size);

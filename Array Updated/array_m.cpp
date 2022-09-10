@@ -9,18 +9,15 @@ int main()
 
     Array a1(size_array);
     Array a2(size_array);
-    Array res(size_array);
 
-    // a1.take_input();
-    cout << "A1 INPUT OVER" << endl;
-    // a2.take_input();
-    cout << "A2 INTPUT OVER" << endl;
+    cin >> a1;
+    cout << a1;
 
-    res = a1 + a2;
+    a2 = a1;
 
-    cout << res;
-
-
+    cout << a2;
+   
+    cout << a2.give_size();
 
     return 0;
 }

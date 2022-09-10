@@ -10,6 +10,7 @@ class Array
     public:
         Array();
         Array(int size);
+        ~Array();
         Array operator+(const Array &ob);
         friend ostream &operator<<(ostream &out, const Array &ob);
         friend istream &operator>>(istream &in, const Array &ob);

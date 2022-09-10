@@ -7,13 +7,14 @@ void add(int a, int b, int& answer)
 }
 
 
-
 int main()
 {
     int answer = 0;
+    string st = "Pawan";
+    string st2 = " Kumar";
+    string st3 = st;
 
-    add(5, 4, answer);
-
-    cout << answer << endl;
+    cout << st3.size();
+   
     return 0;
 }

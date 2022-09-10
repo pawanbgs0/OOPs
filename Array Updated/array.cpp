@@ -13,6 +13,17 @@ Array::Array()
     arr = new int[size];
 }
 
+
+Array::Array(const Array &ob)
+{
+    // for (int i = 0; i < ob.size; i++)
+    // {
+    //     this->arr[i] = ob.arr[i];
+    // }
+    this->arr = ob.arr;
+    this->size = ob.size;
+}
+
 ostream& operator<<(ostream& out, const Array& ob)
 {
 
@@ -25,14 +36,30 @@ ostream& operator<<(ostream& out, const Array& ob)
     return out;
 }
 
+
+istream &operator>>(istream &in, const Array &ob)
+{
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "Enter the value at " << i << "th Position: ";
+        in >> ob.arr[i];
+    }
+    return in;
+}
+
 Array Array::operator+(Array temp)
 {
-    Array temp2(this->size);
-
     for (int i = 0; i < temp.size; i++)
     {
-        temp2.arr[i] = this->arr[i] + temp.arr[i];
+        this->arr[i] = this->arr[i] + temp.arr[i];
     }
 
-    return temp2;
+    return *this;
+}
+
+
+
+int Array::give_size()
+{
+    return this->size;
 }

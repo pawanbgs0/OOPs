@@ -9,9 +9,9 @@ class Array
     public:
         Array();
         Array(int size);
-        // void take_input();
-        // void display();
+        Array(const Array& ob);
         Array operator+(Array temp);
+        int give_size();
         friend ostream& operator<<(ostream& out, const Array& ob);
         friend istream& operator>>(istream& in, const Array& ob);
 };

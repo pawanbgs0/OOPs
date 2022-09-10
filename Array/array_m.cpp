@@ -7,7 +7,7 @@ int main()
     cout << "Give the size of Array: ";
     cin >> size_array;
 
-    Array a1(size_array);
+    Array (a1size_array);
     Array a2(size_array);
     Array res(size_array);
 
