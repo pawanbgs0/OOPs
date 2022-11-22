@@ -16,12 +16,13 @@ Array::Array()
 
 Array::Array(const Array &ob)
 {
-    // for (int i = 0; i < ob.size; i++)
-    // {
-    //     this->arr[i] = ob.arr[i];
-    // }
-    this->arr = ob.arr;
     this->size = ob.size;
+    // this->arr = ob.arr;
+
+    for (int i = 0; i < ob.size; i++)
+    {
+        this->arr[i] = ob.arr[i];
+    }
 }
 
 ostream& operator<<(ostream& out, const Array& ob)
@@ -37,7 +38,7 @@ ostream& operator<<(ostream& out, const Array& ob)
 }
 
 
-istream &operator>>(istream &in, const Array &ob)
+istream &operator>>(istream &in, Array &ob)
 {
     for (int i = 0; i < 5; i++)
     {

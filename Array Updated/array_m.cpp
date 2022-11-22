@@ -10,6 +10,13 @@ int main()
     Array a1(size_array);
     Array a2(size_array);
 
+    Array p, q;
+
+    /*kjdhfksdhfkjsdhf*/ //stored in p
+
+
+    q = p;
+
     cin >> a1;
     cout << a1;
 
