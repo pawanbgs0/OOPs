@@ -13,12 +13,12 @@ vector<vector<int>> take_input()
     cout << "Enter the number of edges: ";
     cin >> no_edges;
 
-    for (int i = 0; i < no_of_vertex + 1; i++)
+    for (int i = 0; i < no_of_vertex; i++)
     {
         adj_list.push_back(temp);
     }
 
-    for (int i = 1; i <= no_edges; i++)
+    for (int i = 0; i < no_edges; i++)
     {
         int source, dest;
 
