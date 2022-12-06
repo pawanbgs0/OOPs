@@ -49,3 +49,38 @@ void display(vector<vector<int>> adj_list)
         cout << endl;
     }
 }
+
+
+vector<int> bfs(vector<vector<int>> &adjList) 
+{
+    queue<int> q;
+	vector<int> res;
+	vector<bool> visited(adjList.size(), false);
+	
+	q.push(0);
+	visited[0] = true;
+	
+	while (!q.empty())
+	{
+		int node = q.front();
+		
+		res.push_back(node);
+		q.pop();
+		
+		vector<int> child = adjList[node];
+		
+		for (int i = 0; i < child.size(); i++)
+		{
+			int memeber = child[i];
+			
+			if (visited[memeber] == false)
+			{
+				q.push(memeber);
+				visited[memeber] = true;
+			}
+		}
+		
+	}
+	
+	return res;
+}
